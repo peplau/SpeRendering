@@ -1,0 +1,13 @@
+﻿@using Sitecore.Mvc
+@model Sitecore.Mvc.Presentation.RenderingContext
+@{
+    Layout = null;
+}
+<div>
+    <h2>
+        @Html.Sitecore().Field("Title")
+    </h2>
+    <p>
+        @Html.Sitecore().Field("Body")
+    </p>
+</div>
