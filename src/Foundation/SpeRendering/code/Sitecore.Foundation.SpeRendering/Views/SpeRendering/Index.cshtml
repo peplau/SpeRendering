@@ -1,9 +1,10 @@
-﻿@{
+﻿@model Sitecore.Foundation.SpeRendering.Models.Message
+@{
     Layout = null;
 }
-@if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+@if (Sitecore.Context.PageMode.IsExperienceEditorEditing || !string.IsNullOrEmpty(Model.Text))
 {
     <div>
-        &nbsp;
+        @(string.IsNullOrEmpty(Model.Text) ? "&nbsp;" : Model.Text)
     </div>
 }

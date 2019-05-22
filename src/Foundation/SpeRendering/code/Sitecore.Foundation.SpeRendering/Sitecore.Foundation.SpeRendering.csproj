@@ -123,6 +123,7 @@
   <ItemGroup>
     <Compile Include="Controllers\SpeRenderingController.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Mvc\Names\TemplateIds.cs" />
     <Compile Include="Mvc\Presentation\PowershellRenderer.cs" />
     <Compile Include="Pipelines\Response\GetRenderer\GetPowershellRenderer.cs" />
