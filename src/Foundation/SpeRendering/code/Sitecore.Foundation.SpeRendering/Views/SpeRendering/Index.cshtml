@@ -5,6 +5,13 @@
 @if (Sitecore.Context.PageMode.IsExperienceEditorEditing || !string.IsNullOrEmpty(Model.Text))
 {
     <div>
-        @(string.IsNullOrEmpty(Model.Text) ? "&nbsp;" : Model.Text)
+        @if (string.IsNullOrEmpty(Model.Text))
+        {
+            <text>&nbsp;</text>
+        }
+        else
+        {
+            @Html.Raw(Model.Text)
+        }
     </div>
 }

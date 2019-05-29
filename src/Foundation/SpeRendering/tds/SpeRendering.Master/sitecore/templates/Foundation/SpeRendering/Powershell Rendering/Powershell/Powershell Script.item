@@ -2,7 +2,7 @@
 version: 1
 id: {0B4F90A4-F0B3-4D11-BFD9-B7664977650C}
 database: master
-path: /sitecore/templates/Foundation/SpeRendering/Powershell rendering/Data/Powershell Script
+path: /sitecore/templates/Foundation/SpeRendering/Powershell rendering/Powershell/Powershell Script
 parent: {3C907698-B938-412A-870E-4CFA191AF7D8}
 name: Powershell Script
 master: {00000000-0000-0000-0000-000000000000}
@@ -62,7 +62,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 8887b379-4b8a-4de9-9732-22a40afc1cd8
+revision: 06a77585-54d5-4879-8e94-dd8ad4ca870e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -91,18 +91,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8887b379-4b8a-4de9-9732-22a40afc1cd8
+06a77585-54d5-4879-8e94-dd8ad4ca870e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20181217T204459Z
+20190523T215607Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

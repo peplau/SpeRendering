@@ -2,18 +2,25 @@
 version: 1
 id: {3C907698-B938-412A-870E-4CFA191AF7D8}
 database: master
-path: /sitecore/templates/Foundation/SpeRendering/Powershell rendering/Data
+path: /sitecore/templates/Foundation/SpeRendering/Powershell rendering/Powershell
 parent: {FB972F7B-7033-4EDA-A74D-722280D10732}
-name: Data
+name: Powershell
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
 created: 20181217T204354Z
 
+----field----
+field: {E2E2B75D-A2F7-4075-BDE2-D13306E9E350}
+name: Collapsed by Default
+key: collapsed by default
+content-length: 0
+
+
 ----version----
 language: en
 version: 1
-revision: c0df57b7-8fce-4554-90aa-d6f4466469bc
+revision: 8ab79de5-bf62-472d-a519-f313f0910c0e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,18 +42,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c0df57b7-8fce-4554-90aa-d6f4466469bc
+8ab79de5-bf62-472d-a519-f313f0910c0e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20181217T204408Z
+20190524T210340Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

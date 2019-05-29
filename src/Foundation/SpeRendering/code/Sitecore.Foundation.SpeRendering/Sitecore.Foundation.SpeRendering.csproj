@@ -49,6 +49,9 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="ObjectDumper, Version=1.0.0.12, Culture=neutral, PublicKeyToken=9e2fabf3af85dba9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\PSWebsite\packages\ObjectDumper.1.0.0.12\lib\net35-Client\ObjectDumper.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\packages\Sitecore.Kernel.12.0.0\lib\net471\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
@@ -114,13 +117,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
     <Content Include="App_Config\Include\Foundation\Sitecore.Foundation.SpeRendering.config" />
     <Content Include="Views\SpeRendering\Index.cshtml" />
     <Content Include="Views\SpeRendering\Test.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\SpeRenderingController.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Message.cs" />
@@ -130,7 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\web.config" />
+    <None Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

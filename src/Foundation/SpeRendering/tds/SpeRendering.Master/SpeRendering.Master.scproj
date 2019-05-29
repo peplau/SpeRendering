@@ -17,13 +17,13 @@
     <AssemblyName>SpeRendering.Master</AssemblyName>
     <Name>SpeRendering.Master</Name>
     <RootNamespace>SpeRendering.Master</RootNamespace>
-    <SourceWebVirtualPath>/Sitecore.Foundation.SpeRendering.csproj</SourceWebVirtualPath>
-    <SourceWebProject>{90afccdb-a769-4f9d-b57f-7810de01f28c}|src\Foundation\SpeRendering\code\Sitecore.Foundation.SpeRendering\Sitecore.Foundation.SpeRendering.csproj</SourceWebProject>
-    <SourceWebPhysicalPath>..\..\code\Sitecore.Foundation.SpeRendering</SourceWebPhysicalPath>
     <ManageRoles>False</ManageRoles>
     <SitecoreDatabase>master</SitecoreDatabase>
     <AssemblyStatus>Exclude</AssemblyStatus>
     <IncludeItemsChangedAfter>$([System.DateTime]::Now.AddDays(-30).ToString("yyyy-MM-dd"))</IncludeItemsChangedAfter>
+    <SourceWebVirtualPath>/Sitecore.Foundation.SpeRendering.csproj</SourceWebVirtualPath>
+    <SourceWebProject>{90afccdb-a769-4f9d-b57f-7810de01f28c}|src\Foundation\SpeRendering\code\Sitecore.Foundation.SpeRendering\Sitecore.Foundation.SpeRendering.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\..\code\Sitecore.Foundation.SpeRendering</SourceWebPhysicalPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,12 +44,6 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\code\Sitecore.Foundation.SpeRendering\Sitecore.Foundation.SpeRendering.csproj">
-      <Project>{90afccdb-a769-4f9d-b57f-7810de01f28c}</Project>
-      <Name>Sitecore.Foundation.SpeRendering</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <SitecoreItem Include="sitecore\system.item">
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -68,7 +62,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\PowerShell\Script Library\SPE Rendering.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\PowerShell\Script Library\SPE Rendering\Feature.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
@@ -126,38 +120,20 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Powershell Rendering\Data.item">
+    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Powershell Rendering\Powershell.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Powershell Rendering\Data\Powershell Script.item">
+    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Powershell Rendering\Powershell\Powershell Script.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Test.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Test\Test Datasource.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Test\Test Datasource\__Standard Values.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Test\Test Datasource\Test Data.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Test\Test Datasource\Test Data\Body.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Foundation\SpeRendering\Test\Test Datasource\Test Data\Title.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\code\Sitecore.Foundation.SpeRendering\Sitecore.Foundation.SpeRendering.csproj">
+      <Project>{90afccdb-a769-4f9d-b57f-7810de01f28c}</Project>
+      <Name>Sitecore.Foundation.SpeRendering</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>
